@@ -7,3 +7,5 @@ builder.AddDependencies();
 var app = builder.Build();
 app.AddDependencies();
 app.Run();
+
+public partial class Program { }  // <-- necessário para os testes

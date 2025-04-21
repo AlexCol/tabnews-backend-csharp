@@ -15,6 +15,11 @@ public class StatusController : ControllerBase {
         _connectionFactory = connectionFactory;
     }
 
+    [HttpHead] //! para uso no render, para mandar a aplicação acordada
+    public IActionResult Head() {
+        return Ok();
+    }
+
     [HttpGet]
     public async Task<IActionResult> GetStatusAsync() {
         string sql;
@@ -44,4 +49,5 @@ public class StatusController : ControllerBase {
 
         return Ok(retorno);
     }
+
 }
